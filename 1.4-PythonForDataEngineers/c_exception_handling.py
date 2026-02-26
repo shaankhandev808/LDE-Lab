@@ -7,8 +7,8 @@
 import pandas
 
 # We're going to try to read two CSV files. One exists, one doesn't! 
-e_commerce_data_path_csv = "./data/data.csv"    # File exists.
-e_commerce_data_fake_path_csv = "./data/fake_data.csv"  # File doesn't exist.
+e_commerce_data_path_csv = "./dummy_data/dummy_data.csv"    # File exists.
+e_commerce_data_fake_path_csv = "./dummy_data/fake_data.csv"  # File doesn't exist.
 
 # Try-Except example, raise BaseException.
 try:
