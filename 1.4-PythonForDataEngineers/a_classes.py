@@ -1,3 +1,5 @@
+# Section A: Classes
+
 # Here we learn about classes in Python.
 # The thing to realize is that a Class providess a blueprint for an Object.
 
@@ -17,7 +19,7 @@ class MyAge:
         self.__my_age_years = relativedelta(
             date.today(), self.__date_of_birth).years
 
-    # Classes can also have methods.
+    # Classes can also have methods. self allows you to access the object's attributes.
     def show_me_my_age(self):
         return f"{self.__my_name}, you are so young, only {self.__my_age_years} years old!"
 
