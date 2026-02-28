@@ -7,33 +7,34 @@
 import pandas
 
 # We're going to try to read two CSV files. One exists, one doesn't! 
+# These Strings are filepaths to our CSV's.
 e_commerce_data_path_csv = "./dummy_data/dummy_data.csv"    # File exists.
 e_commerce_data_fake_path_csv = "./dummy_data/fake_data.csv"  # File doesn't exist.
 
-# Try-Except example, raise BaseException.
+# Try-Except example, raise BaseException. We try and fail to read a nonexistent file.
 try:
     e_commerce_csv_df = pandas.read_csv(
         e_commerce_data_fake_path_csv,  encoding='unicode_escape', nrows=1000)
-except:
+except: # Catch the exception, print something.
     print(
-        "Please provide a corect path to the file!"
+        "Please provide a correct path to the file!"
     )
-# > Please provide a corect path to the file!
+# > Please provide a correct path to the file!
 
-# show with value exception or something else
+# Now raise an Exception that also provides information about the error. 
 try:
     e_commerce_csv_df = pandas.read_csv(
         e_commerce_data_fake_path_csv,  encoding='unicode_escape', nrows=1000)
 except FileNotFoundError as error:
     print(
-        # f stings for better formating
-        f"{error}, please provide a corect path to the file!"
+        # f string for better formatting.
+        f"{error}, please provide a correct path to the file!"
     )
-# > [Errno 2] No such file or directory: 'fake_data.csv', please provide a corect path to the file!
+# > [Errno 2] No such file or directory: 'fake_data.csv', please provide a correct path to the file!
 
+# We are catching errors without quitting the program. We have controlled exits, controlled failures.
 
-# create a user defined exception
-
+# Now create a custom Exception. It has as a base class the standard Exception class.
 class FileHasToManyRows(Exception):
     """Exception raised if file has too many rows.
 
