@@ -40,3 +40,6 @@ quantities = e_commerce_csv_df["Quantity"].to_list()
 # Iterate over each value in the Quantity column and Write information to log file.
 for quantity in quantities:
     is_positive(quantity)
+
+# Checking Git Desktop functionality.
+
