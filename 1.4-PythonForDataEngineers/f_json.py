@@ -11,13 +11,11 @@
 
 # Import the JSON module.
 import json
+# Import prettyprint too to break up JSON objects, which
+# are usually just walls of text.
 from pprint import pprint
-# pp = pprint.PrettyPrinter(indent=4)
 
-
-# JSON basics
-
-# Below is an example of a json array of objects in ./data/data_subset.json file
+# An example of a JSON array of objects in ./data/data_subset.json.
 # [
 #     {
 #         "InvoiceNo": 536370,
@@ -43,13 +41,15 @@ from pprint import pprint
 #     ...
 # ]
 
-# Deserialization of JSON is a conversion of JSON objects into their respective Python objects using JSON decoder following the translations bellow.
-# It is important to note here that the json.loads() method will not always return a dictionary. The following table shows JSON objects and the Python data types after conversion. For more details, see Python docs.
+# Deserialization of JSON is a conversion of JSON objects into their respective Python
+# objects using a JSON decoder. It is important to note here that the json.loads()
+# method will not always return a dictionary. The following table shows JSON objects
+# and the Python data types after conversion.
 
 # JSON OBJECT	PYTHON OBJECT
-# object	    dict
+# object	dict
 # array	        list
-# string	    str
+# string	str
 # null	        None
 # number(int)	int
 # number(real)	float
@@ -57,8 +57,6 @@ from pprint import pprint
 # false	        False
 
 # Load JSON from file (deserialize text or binary file containing a JSON document to a Python object)
-
-
 with open("./dummy_data/data_subset.json") as json_file:
     data = json.load(json_file)
 pprint(data)
@@ -95,8 +93,10 @@ pprint(data)
 # >   'StockCode': 22993,
 # >   'UnitPrice': 1.25}]
 
-# Create JSON string (serialize object to a JSON formatted string) and pretty print of JSON string
-
+# Now we dump our JSON into a string.
+# Deserialize object to a formatted string.
+# I hate the guy that wrote these notes, he must be regarded.
+# It's just one big string, not a great structure. 
 json_formatted_string = json.dumps(data)
 pprint(json_formatted_string)
 # > ('[{"InvoiceNo": 536370, "StockCode": 22492, "Description": "MINI PAINT SET '
@@ -111,8 +111,8 @@ pprint(json_formatted_string)
 # >  'OF 4 PANTRY JELLY MOULDS", "Quantity": 1, "InvoiceDate": "8/2/2011 15:19", '
 # >  '"UnitPrice": 1.25, "CustomerID": 14076, "Country": "United Kingdom"}]')
 
-# Load JSON string (deserialize a str, bytes or bytearray instance containing a JSON document to a Python object)
-
+# Now we convert the JSON-formatted long string to a Python object, an array that
+# we can use. 
 transactions_list_of_dicts = json.loads(json_formatted_string)
 pprint(transactions_list_of_dicts)
 # > [{'Country': 'France',
