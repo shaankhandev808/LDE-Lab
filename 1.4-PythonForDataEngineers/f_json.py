@@ -148,9 +148,8 @@ pprint(transactions_list_of_dicts)
 # >   'StockCode': 22993,
 # >   'UnitPrice': 1.25}]
 
-# Access individual attributes within the object
-
-# List of keys at the first list element (dictionary)
+# So each element in this array is a dictionary object. Get the
+# first element and print out its keys.
 pprint(transactions_list_of_dicts[0].keys())
 # > dict_keys(['InvoiceNo', 'StockCode', 'Description', 'Quantity', 'InvoiceDate', 'UnitPrice', 'CustomerID', 'Country'])
 
