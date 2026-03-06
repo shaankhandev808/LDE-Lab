@@ -41,22 +41,20 @@ from pprint import pprint
 #     ...
 # ]
 
-# Deserialization of JSON is a conversion of JSON objects into their respective Python
-# objects using a JSON decoder. It is important to note here that the json.loads()
-# method will not always return a dictionary. The following table shows JSON objects
-# and the Python data types after conversion.
+# Deserialization converts a JSON object into a Python object. 
+# Serialization goes the other way. 
 
 # JSON OBJECT	PYTHON OBJECT
-# object	dict
-# array	        list
-# string	str
-# null	        None
-# number(int)	int
-# number(real)	float
-# true	        True
-# false	        False
+# Object        Dict
+# Array	        List
+# String	    Str
+# Null	        None
+# Number(Int)	Int
+# Number(Real)	Float
+# True	        True
+# False	        False
 
-# Load JSON from file (deserialize text or binary file containing a JSON document to a Python object)
+# Load a JSON object found in a file.
 with open("./dummy_data/data_subset.json") as json_file:
     data = json.load(json_file)
 pprint(data)
@@ -93,7 +91,7 @@ pprint(data)
 # >   'StockCode': 22993,
 # >   'UnitPrice': 1.25}]
 
-# Now we dump our JSON into a string.
+# Now we dump our JSON data into a Python String.
 # Deserialize object to a formatted string.
 # I hate the guy that wrote these notes, he must be regarded.
 # It's just one big string, not a great structure. 
@@ -111,8 +109,8 @@ pprint(json_formatted_string)
 # >  'OF 4 PANTRY JELLY MOULDS", "Quantity": 1, "InvoiceDate": "8/2/2011 15:19", '
 # >  '"UnitPrice": 1.25, "CustomerID": 14076, "Country": "United Kingdom"}]')
 
-# Now we convert the JSON-formatted long string to a Python object, an array that
-# we can use. 
+# Now we convert the JSON-formatted long string to a Python object, a Python
+# List object that we can use. 
 transactions_list_of_dicts = json.loads(json_formatted_string)
 pprint(transactions_list_of_dicts)
 # > [{'Country': 'France',
@@ -148,12 +146,13 @@ pprint(transactions_list_of_dicts)
 # >   'StockCode': 22993,
 # >   'UnitPrice': 1.25}]
 
-# So each element in this array is a dictionary object. Get the
+# Each element in this array is a dict. Get the
 # first element and print out its keys.
 pprint(transactions_list_of_dicts[0].keys())
-# > dict_keys(['InvoiceNo', 'StockCode', 'Description', 'Quantity', 'InvoiceDate', 'UnitPrice', 'CustomerID', 'Country'])
+# > dict_keys(['InvoiceNo', 'StockCode', 'Description', 
+# > 'Quantity', 'InvoiceDate', 'UnitPrice', 'CustomerID', 'Country'])
 
-# Loop through a list of transactions and access all 'InvoiceNo' for each transaction by using .get method with a key name 'InvoiceNo'
+# Iterate through all the keys and get their values.
 for transaction in transactions_list_of_dicts:
     pprint(transaction.get('InvoiceNo'))
 # > 536370
