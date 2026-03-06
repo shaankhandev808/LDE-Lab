@@ -3,7 +3,7 @@
 # Previous sections were fun and play, now let's get serious.
 # You're going to deal with a ton of JSON, so pay attention.
 # We're going to load JSONs from file, create JSON objects from
-# strings, dump objects into strings, loop through JSONs, get
+# strings, dump JSON objects into strings, loop through JSONs, get
 # specific values from JSONs, update part of a JSON, write JSON
 # into a file.
 
