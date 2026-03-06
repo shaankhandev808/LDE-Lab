@@ -18,7 +18,6 @@ e_commerce_csv_df = pd.read_csv(
     e_commerce_data_path_csv,  encoding='unicode_escape', nrows=1000)
 
 # Create logger.
-# Config the default level to debug - This debugs even the debug level
 logging.basicConfig(
     filename="./logging_data/reading_csvs.log", # Logging output destination file. 
     level=logging.DEBUG,    # Set minimum severity to DEBUG. Lowest level available. 
