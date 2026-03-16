@@ -15,7 +15,7 @@ import json
 # are usually just walls of text.
 from pprint import pprint
 
-# An example of a JSON array of objects in ./data/data_subset.json.
+# An example of a JSON in ./data/data_subset.json.
 # [
 #     {
 #         "InvoiceNo": 536370,
@@ -54,7 +54,7 @@ from pprint import pprint
 # True	        True
 # False	        False
 
-# Load a JSON object found in a file into a List.
+# Load a JSON found in a file into a Python object, a List.
 with open("./dummy_data/data_subset.json") as json_file:
     data = json.load(json_file)
 print("A: Print out our JSON-formatted List object.")
@@ -94,9 +94,7 @@ pprint(data)
 # >   'UnitPrice': 1.25}]
 
 # Now we dump our JSON data into a Python String.
-# Deserialize object to a formatted string.
-# I hate the guy that wrote these notes, he must be regarded.
-# It's just one big string, not a great structure. 
+# Deserialize a Python object to a JSON-formatted string.
 json_formatted_string = json.dumps(data)
 print("B: Print out our JSON-formatted String.")
 print(type(json_formatted_string))
@@ -113,7 +111,7 @@ pprint(json_formatted_string)
 # >  'OF 4 PANTRY JELLY MOULDS", "Quantity": 1, "InvoiceDate": "8/2/2011 15:19", '
 # >  '"UnitPrice": 1.25, "CustomerID": 14076, "Country": "United Kingdom"}]')
 
-# Now we convert the JSON-formatted string to a Python object, a Python
+# Now we convert the JSON-formatted string back to a Python object, a Python
 # List object that we can use. 
 transactions_list_of_dicts = json.loads(json_formatted_string)
 print("C: Print out our List.")
@@ -269,6 +267,10 @@ pprint(json.dumps(transactions_list_of_dicts))
 # >  'JELLY MOULDS", "Quantity": 1, "InvoiceDate": "8/2/2011 15:19", "UnitPrice": '
 # >  '1.25, "CustomerID": 14076, "Country": "United Kingdom"}]')
 
-# Or to a file (do not forget to specify 'w' write mode):
+# JSON dump() will write a JSON-formatted text to a file. 
+# Make sure to specify 'w' for write mode.
 with open("./dummy_data/dumped_json.json", 'w') as json_file:
     json.dump(transactions_list_of_dicts, json_file)
+
+# JSON dumps() / loads() -- Works with Strings. It's like S is for String.
+# JSON dump() / load() -- Work with files and Python Objects.
