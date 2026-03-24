@@ -127,7 +127,6 @@ if __name__ == '__main__':
     invalid_json_string = '{"InvoiceNo": 536370 "StockCode": 22492, "Description":  "MINI PAINT SET VINTAGE", "Quantity": 36, "InvoiceDate": "12/1/2010 8:45",   "UnitPrice": 0.65, "CustomerID": 12583, "Country": "France"}'
 
     # Validate a valid JSON string.
-    
     res = validate_json(valid_json_string)
     print(res)
  
@@ -135,11 +134,10 @@ if __name__ == '__main__':
     res = validate_json(invalid_json_string)
     print(res)
  
-    # validate data with valid schema
+    # Validate data with a valid schema.
     res = validate_json_schema(valid_transaction_dict,  my_schema=transaction_schema)
     print(res)
-    # > (True, 'Given JSON data is Valid')
 
-    # validate data with invalid schema
+    # Validate data with an invalid schema.
     res = validate_json_schema(InvoiceNo_is_a_string,  my_schema=transaction_schema)
     print(res)
