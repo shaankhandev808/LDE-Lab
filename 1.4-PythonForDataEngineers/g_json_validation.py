@@ -126,11 +126,12 @@ if __name__ == '__main__':
     # Create invalid JSON string - missing ',' delimiter.
     invalid_json_string = '{"InvoiceNo": 536370 "StockCode": 22492, "Description":  "MINI PAINT SET VINTAGE", "Quantity": 36, "InvoiceDate": "12/1/2010 8:45",   "UnitPrice": 0.65, "CustomerID": 12583, "Country": "France"}'
 
-    # validate valid json string
+    # Validate a valid JSON string.
+    
     res = validate_json(valid_json_string)
     print(res)
  
-    # validate INVALID json string
+    # Validate an INVALID JSON string.
     res = validate_json(invalid_json_string)
     print(res)
  
