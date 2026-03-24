@@ -1,16 +1,19 @@
 # Section G: JSON Validation.
 
 # You're getting JSON files, now you need to make sure that the
-# information has the right structure. 
+# information has the right schema (read: structure) and the 
+# correct data types therein.
 
-# Now we're going to create a simple JSON validation function, and
-# create a validation of JSON schema. 
+# We're going to make use of the JSONSchema library.
 import json
 import jsonschema
 from jsonschema import validate
 from pprint import pprint
 
-# Here we steal a schema. Required means the JSON requires these keys-values. 
+# Here we create a schema, then validate some input against
+# it. In the "Required" section, we list out the keys required
+# in any input JSON. 
+
 transaction_schema = {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
@@ -47,12 +50,15 @@ transaction_schema = {
         "CustomerID",
         "InvoiceDate",
         "UnitPrice"
-
     ]
 }
 
 # Let's try to do a simple validation of a JSON. 
 # This function just returns True or False.
+# We're just checking if the JSON is correct, like if
+# you forgot a comma or something somewhere. We're seeing
+# if the JSON.loads functions properly. Kinda useless, 
+# but ok.
 def validate_json(json_data):
     try:
         json.loads(json_data)
@@ -61,7 +67,8 @@ def validate_json(json_data):
     return True
 
 # Now we're just trying to validate the schema. 
-# This function takes some JSON data, and then gets the schema for it. 
+# This function takes some JSON data, and sees if its
+# schema matches the required schema. 
 def validate_json_schema(json_data, my_schema):
     # REF: https://json-schema.org/
     schema = my_schema
@@ -71,48 +78,25 @@ def validate_json_schema(json_data, my_schema):
         print(err)
         err = "Given JSON data is not valid."
         return False, err
-    error_message = "Given JSON is valid."
-    return True, error_message
+    message = "Given JSON is valid."
+    return True, message
 
 # Main body of the Python script. Like main method in Java.
 if __name__ == '__main__':
 
-    # Create a JSON schema with attributes and types.
-
-    # Try JSON validation.
+    # Open a JSON and store it in 'data' variable.
     with open("./dummy_data/data_subset.json") as json_file:
         data = json.load(json_file)
 
-    # Below is an example of a json array of objects in ./data/data_subset.json     file
-
-    # First dictionary in the list of dictionaries:
-    #     {
-    #         "InvoiceNo": 536370,
-    #         "StockCode": 22492,
-    #         "Description": "MINI PAINT SET VINTAGE",
-    #         "Quantity": 36,
-    #         "InvoiceDate": "12/1/2010 8:45",
-    #         "UnitPrice": 0.65,
-    #         "CustomerID": 12583,
-    #         "Country": "France"
-    #     }
-
     valid_transaction_dict = data[0]
-    pprint(valid_transaction_dict)
-    # > { 'Country': 'France',
-    # >   'CustomerID': 12583,
-    # >   'Description': 'MINI PAINT SET VINTAGE',
-    # >   'InvoiceDate': '12/1/2010 8:45',
-    # >   'InvoiceNo': 536370,
-    # >   'Quantity': 36,
-    # >   'StockCode': 22492,
-    # >   'UnitPrice': 0.65}
+    pprint(valid_transaction_dict)  # Print out some data.
 
+    # Try to validate the JSON to see if it's got the correct structure.
     res = validate(instance=valid_transaction_dict, schema=transaction_schema)
     print(res)
     # > None
 
-    # Now have an Dict that is missing Customer_ID.
+    # Create a Dict that is missing Customer_ID.
     customer_id_missing_dict = {
         "InvoiceNo": 536370,
         "StockCode": 22492,
@@ -122,46 +106,9 @@ if __name__ == '__main__':
         "UnitPrice": 0.65,
         "Country": "France"
     }
-    ############################################################################################
-    # 1- Just tests with the validate function that throws an error directly
-    ############################################################################################
 
-    # uncomment the line below to see the error from the wrong JSON
-    #validate(instance=customer_id_missing_dict, schema=transaction_schema) 
- 
-    # > Traceback (most recent call last):
-    # >   File "<string>", line 1, in <module>
-    # >   File  "C:\Users\kbaka\_projects_python\2021-12-03_python2_teamdatascience\python2\ven  v\lib\site-packages\jsonschema\validators.py", line 967, in validate
-    # >     raise error
-    # > ValidationError: 'CustomerID' is a required property
-    # >
-    # > Failed validating 'required' in schema:
-    # >     {'$schema': 'http://json-schema.org/draft-04/schema#',
-    # >      'properties': {'Country': {'type': 'string'},
-    # >                     'CustomerID': {'type': 'integer'},
-    # >                     'Description': {'type': 'string'},
-    # >                     'InvoiceDate': {'type': 'string'},
-    # >                     'InvoiceNo': {'type': 'integer'},
-    # >                     'Quantity': {'type': 'integer'},
-    # >                     'StockCode': {'type': 'integer'},
-    # >                     'UnitPrice': {'type': 'number'}},
-    # >      'required': ['InvoiceNo',
-    # >                   'StockCode',
-    # >                   'Quantity',
-    # >                   'CustomerID',
-    # >                   'InvoiceDate',
-    # >                   'UnitPrice'],
-    # >      'type': 'object'}
-    # >
-    # > On instance:
-    # >     {'Country': 'France',
-    # >      'Description': 'MINI PAINT SET VINTAGE',
-    # >      'InvoiceDate': '12/1/2010 8:45',
-    # >      'InvoiceNo': 536370,
-    # >      'Quantity': 36,
-    # >      'StockCode': 22492,
-    # >      'UnitPrice': 0.65}
-
+    # This one has an incorrect data type in its first key-value
+    # pair.
     InvoiceNo_is_a_string = {
         "InvoiceNo": "536370",
         "StockCode": 22492,
@@ -173,41 +120,12 @@ if __name__ == '__main__':
         "Country": "France",
         "CustomerID": 12583,
     }
-    #validate(instance=InvoiceNo_is_a_string, schema=transaction_schema)
-    # > Traceback (most recent call last):
-    # >   File "<string>", line 1, in <module>
-    # >   File  "C:\Users\kbaka\_projects_python\2021-12-03_python2_teamdatascience\python2\ven  v\lib\site-packages\jsonschema\validators.py", line 967, in validate
-    # >     raise error
-    # > ValidationError: '536370' is not of type 'integer'
-    # >
-    # > Failed validating 'type' in schema['properties']['InvoiceNo']:
-    # >     {'type': 'integer'}
-    # >
-    # > On instance['InvoiceNo']:
-    # >     '536370'
 
-
-    ############################################################################################
-    # 2- Tests with the custom validate_json function
-    ############################################################################################
-
-    # Load valid JSON string
+    # Load valid JSON string.
     valid_json_string = json.dumps(valid_transaction_dict)
 
-    # Create invalid JSON string - missing ',' delimiter
+    # Create invalid JSON string - missing ',' delimiter.
     invalid_json_string = '{"InvoiceNo": 536370 "StockCode": 22492, "Description":  "MINI PAINT SET VINTAGE", "Quantity": 36, "InvoiceDate": "12/1/2010 8:45",   "UnitPrice": 0.65, "CustomerID": 12583, "Country": "France"}'
-
-    ## Activate this json.loads to see that the string cannot be loaded and throws exception
-    #json.loads(invalid_json_string)
-    # > Traceback (most recent call last):
-    # >   File "<string>", line 1, in <module>
-    # >   File  "C:\Users\kbaka\AppData\Local\Programs\Python\Python39\lib\json\__init__.py",    line 346, in loads
-    # >     return _default_decoder.decode(s)
-    # >   File  "C:\Users\kbaka\AppData\Local\Programs\Python\Python39\lib\json\decoder.py",     line 337, in decode
-    # >     obj, end = self.raw_decode(s, idx=_w(s, 0).end())
-    # >   File  "C:\Users\kbaka\AppData\Local\Programs\Python\Python39\lib\json\decoder.py",     line 353, in raw_decode
-    # >     obj, end = self.scan_once(s, idx)
-    # > JSONDecodeError: Expecting ',' delimiter: line 1 column 22 (char 21)
 
     # validate valid json string
     res = validate_json(valid_json_string)
@@ -225,11 +143,3 @@ if __name__ == '__main__':
     # validate data with invalid schema
     res = validate_json_schema(InvoiceNo_is_a_string,  my_schema=transaction_schema)
     print(res)
-    # > '536370' is not of type 'integer'
-    # >
-    # > Failed validating 'type' in schema['properties']['InvoiceNo']:
-    # >     {'type': 'integer'}
-    # >
-    # > On instance['InvoiceNo']:
-    # >     '536370'
-    # > (False, 'Given JSON data is not valid')
