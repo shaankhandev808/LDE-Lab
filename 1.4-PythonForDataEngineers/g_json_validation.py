@@ -12,8 +12,7 @@ from pprint import pprint
 
 # Here we create a schema, then validate some input against
 # it. In the "Required" section, we list out the keys required
-# in any input JSON. 
-
+# in any JSON. 
 transaction_schema = {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
