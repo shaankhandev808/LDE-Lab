@@ -6,10 +6,13 @@
 # Import pandas.
 import pandas
 
+import os
+print("Python is currently executing from:", os.getcwd())
+
 # We're going to try to read two CSV files. One exists, one doesn't! 
 # These Strings are filepaths to our CSV's.
-e_commerce_data_path_csv = "./dummy_data/dummy_data.csv"    # File exists.
-e_commerce_data_fake_path_csv = "./dummy_data/fake_data.csv"  # File doesn't exist.
+e_commerce_data_path_csv = "1.4-PythonForDataEngineers/dummy_data/dummy_data.csv"    # File exists.
+e_commerce_data_fake_path_csv = "1.4-PythonForDataEngineers/dummy_data/fake_data.csv"  # File doesn't exist.
 
 # Try-Except example, raise BaseException. We try and fail to read a nonexistent file.
 try:
@@ -63,8 +66,13 @@ try:
 # Catch the error.
 except FileNotFoundError as error:
     print(
-        f"{error}, please provide a corect path to the file!"
+        f"{error}, please provide a correct path to the file!"
     )
 # > Traceback (most recent call last):
 # >   File "<string>", line 6, in <module>
 # > FileHasToManyRows: Csv file has too many rows, max rows is 1000 and the file has 1100
+
+except FileHasToManyRows as error:
+    print(
+        f"Custom Error Caught: {error}"
+    )
