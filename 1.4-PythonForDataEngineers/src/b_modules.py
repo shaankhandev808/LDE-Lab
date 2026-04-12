@@ -3,7 +3,6 @@
 # Here we learn about Modules. Once we've created a Class
 # we can import it into another file and make use of its 
 # attributes and methods. 
-
 from a_classes import MyAge
 
 # Instantiate a new object using the imported module, make
