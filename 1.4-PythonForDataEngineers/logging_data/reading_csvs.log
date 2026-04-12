@@ -32,3 +32,309 @@
 2026-02-27 23:30:53,287 - ERROR - Error! Number 3 is not greater than 4!
 2026-02-27 23:30:53,287 - DEBUG - Checking if 2 is greater than 4.
 2026-02-27 23:30:53,287 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 8 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:35:39,128 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 32 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 8 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:35:39,128 - INFO - 6 is greater than 4.
+2026-04-12 12:35:39,128 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:35:39,128 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:35:39,128 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:35:39,128 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 8 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:38:15,457 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 32 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 8 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:15,457 - INFO - 6 is greater than 4.
+2026-04-12 12:38:15,457 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:38:15,457 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:38:15,457 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:38:15,457 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 8 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:38:44,645 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 32 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 8 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:38:44,645 - INFO - 6 is greater than 4.
+2026-04-12 12:38:44,645 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:38:44,645 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:38:44,645 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:38:44,645 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:39:51,684 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,684 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,684 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,684 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 8 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:39:51,685 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 32 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 8 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:39:51,685 - INFO - 6 is greater than 4.
+2026-04-12 12:39:51,685 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:39:51,685 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:39:51,685 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:39:51,685 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:40:15,150 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 8 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:40:15,151 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 32 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 8 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:40:15,151 - INFO - 6 is greater than 4.
+2026-04-12 12:40:15,151 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:40:15,151 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:40:15,151 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:40:15,151 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:53:41,939 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,939 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,939 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,939 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,939 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:53:41,939 - INFO - 8 is greater than 4.
+2026-04-12 12:53:41,939 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,939 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,939 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,939 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,939 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:53:41,939 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:53:41,940 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 32 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 8 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:41,940 - INFO - 6 is greater than 4.
+2026-04-12 12:53:41,940 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:53:41,940 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:53:41,940 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:53:41,940 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:53:55,573 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,573 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,573 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,573 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,573 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 8 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:53:55,574 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 32 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 8 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:53:55,574 - INFO - 6 is greater than 4.
+2026-04-12 12:53:55,574 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:53:55,574 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:53:55,574 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:53:55,574 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 8 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:55:15,889 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 32 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,889 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:55:15,889 - INFO - 8 is greater than 4.
+2026-04-12 12:55:15,890 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,890 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,890 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:15,890 - INFO - 6 is greater than 4.
+2026-04-12 12:55:15,890 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:55:15,890 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:55:15,890 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:55:15,890 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:55:33,998 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,998 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,998 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,998 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,998 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:55:33,998 - INFO - 8 is greater than 4.
+2026-04-12 12:55:33,998 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,998 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,998 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,998 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,998 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:55:33,998 - ERROR - Error! Number 2 is not greater than 4!
+2026-04-12 12:55:33,998 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,998 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,998 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,998 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,998 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,998 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,998 - DEBUG - Checking if 32 is greater than 4.
+2026-04-12 12:55:33,999 - INFO - 32 is greater than 4.
+2026-04-12 12:55:33,999 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,999 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,999 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,999 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,999 - DEBUG - Checking if 8 is greater than 4.
+2026-04-12 12:55:33,999 - INFO - 8 is greater than 4.
+2026-04-12 12:55:33,999 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,999 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,999 - DEBUG - Checking if 6 is greater than 4.
+2026-04-12 12:55:33,999 - INFO - 6 is greater than 4.
+2026-04-12 12:55:33,999 - DEBUG - Checking if 3 is greater than 4.
+2026-04-12 12:55:33,999 - ERROR - Error! Number 3 is not greater than 4!
+2026-04-12 12:55:33,999 - DEBUG - Checking if 2 is greater than 4.
+2026-04-12 12:55:33,999 - ERROR - Error! Number 2 is not greater than 4!

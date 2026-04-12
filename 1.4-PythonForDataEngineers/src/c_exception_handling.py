@@ -1,20 +1,26 @@
 # Section C: Exception Handling
 
-# We are going to raise our own Exceptions, catch a thrown Exception,
-# and create our own custom Exception Class.
+# We are going to raise our own exceptions, catch a thrown exception,
+# and create our own custom exception Class.
 
 # Import pandas.
 import pandas
-
+# Import os for CWD stuff.
 import os
-print("Python is currently executing from:", os.getcwd())
 
 # We're going to try to read two CSV files. One exists, one doesn't! 
 # These Strings are filepaths to our CSV's.
-e_commerce_data_path_csv = "1.4-PythonForDataEngineers/dummy_data/dummy_data.csv"    # File exists.
-e_commerce_data_fake_path_csv = "1.4-PythonForDataEngineers/dummy_data/fake_data.csv"  # File doesn't exist.
+e_commerce_data_path_csv = "dummy_data/dummy_data.csv"    # File exists.
+e_commerce_data_fake_path_csv = "dummy_data/fake_data.csv"  # File doesn't exist.
+
+# Here is a brief debugging pattern for CWD, since filepaths are tricky sometimes.
+# Check if the file exists where the filepath points, THEN try to read it.
+print("CWD:", os.getcwd())
+print("Exists?", os.path.exists("dummy_data/brevened_dataset.csv"))
+# df = pd.read_csv("1.4-PythonForDataEngineers/dummy_data/dummy_data.csv")
 
 # Try-Except example, raise BaseException. We try and fail to read a nonexistent file.
+# Pandas.read_csv() raises an exception that then gets caught by the except block a bit later. 
 try:
     e_commerce_csv_df = pandas.read_csv(
         e_commerce_data_fake_path_csv,  encoding='unicode_escape', nrows=1000)
@@ -28,7 +34,7 @@ except: # Catch the exception, print something.
 try:
     e_commerce_csv_df = pandas.read_csv(
         e_commerce_data_fake_path_csv,  encoding='unicode_escape', nrows=1000)
-# Catch the error.
+# Catch the specific Exception type FileNotFound.
 except FileNotFoundError as error:
     print(
         # f string for better formatting.
@@ -38,7 +44,8 @@ except FileNotFoundError as error:
 
 # We are catching errors without quitting the program. We have controlled exits, controlled failures.
 
-# Now create a custom Exception. It has as a base class the standard Exception class.
+# Now create a custom exception class FileHasTooManyRows that inherits from Exception, its base class.
+# This is how we create custom exceptions in Python. 
 class FileHasToManyRows(Exception):
     """Exception raised if file has too many rows.
 
@@ -49,7 +56,7 @@ class FileHasToManyRows(Exception):
 
     def __init__(self, number_of_rows):
         self.number_of_rows = number_of_rows
-        self.message = f"Csv file has too many rows, max rows is 1000 and the file has {self.number_of_rows}"
+        self.message = f"CSV file has too many rows, max is 1000 and the file has {self.number_of_rows}."
 
         super().__init__(self.message)
 
