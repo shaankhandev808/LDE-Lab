@@ -9,9 +9,9 @@ from dateutil.relativedelta import relativedelta
 
 # Create a MyAge Class. A class definition has attributes and functions.
 class MyAge:
-    # Init is like a Constructor in Java. Takes self + two parameters that get
-    # passed into the newly-created object as attributes. These attributes can be accessed
-    # later. Self is the newly constructed object. 
+    # Init is an Initializor, which is like a Constructor in Java. Takes self + 
+    # two parameters that get passed into the newly-created object as attributes. 
+    # These attributes can be accessed later. Self is the newly constructed object. 
     def __init__(self, date_of_birth, my_name):
         # double underscores indicate "private-ish" attributes, meant for internal use in the Class.
         # Datetime() is used to parse a string into a datetime object.
