@@ -7,6 +7,10 @@
 # create some test functions, and evaluate tests in 
 # command line or VSCode. 
 #
+# Pytest finds test files automatically, runs functions
+# whose names start with test_, and reports wheter assertions
+# pass or fail.
+
 # Usually you have a the following folder structure in
 # your projects:
 # PROJECT
@@ -15,9 +19,19 @@
 # /tests
 #
 # Tests should be isolated from the source code in its
-# own folder.  
+# own folder. So this will all be written in the test/
+# folder under test_g_json_validation.py.
 # 
-#  
-import pytest
-import json
+# Write up a pytest.ini so the tests know which folder from 
+# which it ought to execute. 
+# After everything is set up, go to terminal and type:
+# $ pytest
+# To run the tests. 
+# 
+# When setting up Pytest.ini:
+# [pytest]
+# python_functions = test_ *_test
+# So any tests with "test_" as prefix and "_test" as suffix
+# will run. 
 
+# The cool thing: one of the tests failed! 

@@ -3,12 +3,11 @@
 
 import pytest
 import json
-import jsonschema
 
 # JSONSchema is an implementation of the JSON Schema specification for Python.
 from jsonschema import validate
-from .g_json_validation import validate_json
-from .g_json_validation import validate_json_schema
+from src.g_json_validation import validate_json
+from src.g_json_validation import validate_json_schema
 
 # > $ pytest
 # ================================================================================= test session starts ==================================================================================
