@@ -23,7 +23,12 @@
 # folder under test_g_json_validation.py.
 # 
 # Write up a pytest.ini so the tests know which folder from 
-# which it ought to execute. 
+# which it ought to execute. Place it in the tests/ folder.
+# Also place __init__.py in both the src and tests folders.
+# It's needed in the src folder so it gets recognized as a
+# package. It's needed in the tests folder so that pytest
+# can discover and recognize tests in the folder.
+#  
 # After everything is set up, go to terminal and type:
 # $ pytest
 # To run the tests. 
