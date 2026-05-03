@@ -19,6 +19,9 @@
 
 # pd = pandas, df = dataframe. You see this a lot. 
 
+# Data in a Pandas dataframe is just a table. You have
+# both the names of the columns and the datatypes. 
+
 import pandas as pd
 
 # Check working directory to diagnose these filepath mess-ups.
@@ -36,13 +39,14 @@ print(e_commerce_csv_df.columns)
 # >        'UnitPrice', 'CustomerID', 'Country'],
 # >       dtype='object')
 
+# Print out the data.
 print(e_commerce_csv_df)
 
 #######################################################################
 # Working with Datatypes
 #######################################################################
 
-# show types
+# Print out the datatypes.
 print(e_commerce_csv_df.dtypes)
 # > InvoiceNo       object
 # > StockCode       object
