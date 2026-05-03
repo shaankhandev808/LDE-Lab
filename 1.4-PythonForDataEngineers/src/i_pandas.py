@@ -1,14 +1,17 @@
 # PANDAS 
 
+# Very often you get data in, put into a dataframe, then 
+# transform it. So it's an important topic. 
+
 # Topics to Cover:
 # Reading from CSV.
 # Working with data types.
 # Reading from JSON.
 # Appending dataframes.
-# Merging dataframes.
+# Merging dataframes. (JOINS basically). 
 # Pivoting dataframes.
 # Saving and reading parquet.
-# Melting and Normalization (JSON)
+# Melting and Normalization (JSON) -- very important. 
 # Average, min, max of columns in a dataframe.
 # Add random values to a dataframe. 
 
@@ -58,7 +61,7 @@ print(e_commerce_csv_df.dtypes)
 # > Country         object
 # > dtype: object
 
-# change types
+# Convert these datatypes. 
 e_commerce_csv_df = e_commerce_csv_df.convert_dtypes()
 # New dtypes
 
@@ -75,6 +78,9 @@ print(e_commerce_csv_df.dtypes)
 
 # Cast a pandas object to a specified dtype dtype via dictionary, quantity from int64 to float64, and customerID from int64 to flat64. This
 # is just a dummy example, and I am not telling you that converting customerid to float is a smart move:)
+
+# When you write the wrong datatype into a database it gets messy. 
+# Always check datatypes before you do something that writes from a dataframe somewhere. 
 
 temp_dtype_change_df = e_commerce_csv_df.astype(
     {'Quantity': 'float64',
@@ -96,8 +102,10 @@ print(temp_dtype_change_df.dtypes)
 # Appending Dataframes
 #######################################################################
 
+# It looks like append is deprecated. Now you should use concat.
+
 # load json
-e_commerce_data_path_json = "./data/data_subset.json"
+e_commerce_data_path_json = "./dummy_data/data_subset.json"
 e_commerce_json_df = pd.read_json(
     e_commerce_data_path_json,  encoding='unicode_escape')
 
