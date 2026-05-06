@@ -16,14 +16,11 @@
 # Add random values to a dataframe. 
 
 # Pandas is super important for data engineering.
-# Pandas is just tables. Just think of Tables.
+# Pandas is just tables. Just think of Tables, like Excel tables.
 # NumPy lets you get average, min, max of columns
 # in a dataframe. 
 
 # pd = pandas, df = dataframe. You see this a lot. 
-
-# Data in a Pandas dataframe is just a table. You have
-# both the names of the columns and the datatypes. 
 
 import pandas as pd
 
@@ -32,11 +29,12 @@ import os
 print("Present working directory:")
 print(os.getcwd())
 
-# Load a CSV file.
+# Load a CSV file and read it. 
 e_commerce_data_path_csv = "dummy_data/brevened_dataset.csv"    # Works!
 e_commerce_csv_df = pd.read_csv(
     e_commerce_data_path_csv,  encoding='unicode_escape', nrows=1000)
-# Print out the columns. 
+
+# Print out its columns. 
 print(e_commerce_csv_df.columns)
 # > Index(['InvoiceNo', 'StockCode', 'Description', 'Quantity', 'InvoiceDate',
 # >        'UnitPrice', 'CustomerID', 'Country'],
@@ -48,6 +46,7 @@ print(e_commerce_csv_df)
 #######################################################################
 # Working with Datatypes
 #######################################################################
+# Here we are going to switch up some of the datatypes in the df. 
 
 # Print out the datatypes.
 print(e_commerce_csv_df.dtypes)
@@ -63,7 +62,9 @@ print(e_commerce_csv_df.dtypes)
 
 # Convert these datatypes. 
 e_commerce_csv_df = e_commerce_csv_df.convert_dtypes()
-# New dtypes
+
+# As you can see below, we've gone from objects to strings.
+# Ints and floats remain untouched.
 
 print(e_commerce_csv_df.dtypes)
 # > InvoiceNo       string
@@ -102,7 +103,8 @@ print(temp_dtype_change_df.dtypes)
 # Appending Dataframes
 #######################################################################
 
-# It looks like append is deprecated. Now you should use concat.
+# It looks like append is deprecated. Now you should use concat. So change 
+# append whenever you see it to concat.
 
 # load json
 e_commerce_data_path_json = "./dummy_data/data_subset.json"
@@ -111,10 +113,13 @@ e_commerce_json_df = pd.read_json(
 
 # see how many rows you should have after appending
 print(len(e_commerce_csv_df) + len(e_commerce_json_df))
-# > 1004
+# > 21
 
-# Append the csv and the json to a new dataframe
-e_commerce_appended_df = e_commerce_csv_df.append(e_commerce_json_df)
+# This is how you concatenate dataframes. Also need to create a 
+# new index so that the old ones aren't simply adjoined in the new df.
+df_list = [e_commerce_csv_df, e_commerce_json_df]
+e_commerce_appended_df = pd.concat(df_list, ignore_index=True)
+
 print(e_commerce_appended_df)
 # >     InvoiceNo StockCode                          Description  Quantity         InvoiceDate UnitPrice  CustomerID         Country
 # > 0      536365    85123A   WHITE HANGING HEART T-LIGHT HOLDER         6 2010-12-01 08:26:00      2.55       17850  United Kingdom
@@ -133,7 +138,7 @@ print(e_commerce_appended_df)
 #len(e_commerce_appended_df)
 # > 1004
 
-# print out first few rows of the dataframe
+# Print out first few rows of the dataframe, called the 'head'. 
 print(e_commerce_appended_df.head(10))
 # >   InvoiceNo StockCode                          Description  Quantity     InvoiceDate UnitPrice  CustomerID         Country
 # > 0    536365    85123A   WHITE HANGING HEART T-LIGHT HOLDER         6  12/1/2010 8:26      2.55       17850  United Kingdom
