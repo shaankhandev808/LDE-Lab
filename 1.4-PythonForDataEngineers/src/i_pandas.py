@@ -23,6 +23,7 @@
 # pd = pandas, df = dataframe. You see this a lot. 
 
 import pandas as pd
+from io import StringIO
 
 # Check working directory to diagnose these filepath mess-ups.
 import os
@@ -157,15 +158,19 @@ print(e_commerce_appended_df.head(10))
 # Merging of dataframes
 ##########################################################
 
+# Merging dataframes is just like JOINING in SQL.
+
 my_json = '{"Country" : ["United Kingdom", "France", "Australia", "Netherlands"], "Language":["English" , "French", "English" , "Dutch"]}'
-json_df = pd.read_json(my_json)
+json_df = pd.read_json(StringIO(my_json)) # Read our JSON into a dataframe. Need to wrap in STRINGIO now. 
 print(json_df)
 
-e_commerce_csv_df = e_commerce_csv_df.merge(json_df,on = "Country")
+# Merge ECommerce dataframe with this Country/Lang dataframe, joining on Country. 
+e_commerce_csv_df = e_commerce_csv_df.merge(json_df,on = "Country") 
 print(e_commerce_csv_df)
 
+
 ##########################################################
-# turning into timestamp
+# TURNING OBJECT INTO DATETIME 
 ##########################################################
 
 # do a lambda to change of the timestamp from / to epoch
@@ -196,12 +201,13 @@ print(e_commerce_appended_df.dtypes)
 # > Country                object
 # > dtype: object
 
-# Filter out two columns "Country" and "Quantity"
+# DROP two columns "Country" and "Quantity"
 print(e_commerce_appended_df.columns)
 # > Index(['InvoiceNo', 'StockCode', 'Description', 'Quantity', 'InvoiceDate',
 # >        'UnitPrice', 'CustomerID', 'Country'],
 # >       dtype='object')
 
+# DROP EM!
 e_commerce_appended_df = e_commerce_appended_df.drop(
     ["Country", "Quantity"], axis="columns")
 
@@ -210,9 +216,12 @@ print(e_commerce_appended_df.columns)
 # >        'CustomerID'],
 # >       dtype='object')
 
-# normalize the dataframe
-# normalize a Pandas Column with Maximum Absolute Scaling using Pandas
-print(e_commerce_csv_df.head(5))
+
+
+# NORMALIZE THE DATAFRAME.
+
+# Normalize a Pandas Column with Maximum Absolute Scaling using Pandas
+print(e_commerce_appended_df.head(5))
 # >   InvoiceNo StockCode                          Description  Quantity     InvoiceDate  UnitPrice  CustomerID         Country
 # > 0    536365    85123A   WHITE HANGING HEART T-LIGHT HOLDER         6  12/1/2010 8:26       2.55       17850  United Kingdom
 # > 1    536365     71053                  WHITE METAL LANTERN         6  12/1/2010 8:26       3.39       17850  United Kingdom
@@ -220,6 +229,7 @@ print(e_commerce_csv_df.head(5))
 # > 3    536365    84029G  KNITTED UNION FLAG HOT WATER BOTTLE         6  12/1/2010 8:26       3.39       17850  United Kingdom
 # > 4    536365    84029E       RED WOOLLY HOTTIE WHITE HEART.         6  12/1/2010 8:26       3.39       17850  United Kingdom
 
+# We are going to modify a column in Pandas easily just by looping over the column.
 
 cols_to_normalize = ["Quantity", "UnitPrice"]
 
@@ -228,8 +238,6 @@ def absolute_maximum_scale(series):
 
 for column in cols_to_normalize:
     e_commerce_csv_df[column] = absolute_maximum_scale(e_commerce_csv_df[column])
-
-
 
 print(e_commerce_csv_df.head(5))
 # >   InvoiceNo StockCode                          Description  Quantity     InvoiceDate  UnitPrice  CustomerID         Country
@@ -241,10 +249,11 @@ print(e_commerce_csv_df.head(5))
 
 
 ##########################################################
-# Working with lambdas
+# WORKING WITH LAMBDAS
 ##########################################################
 
-e_commerce_csv_df['UnitPrice'] = e_commerce_csv_df['UnitPrice'].apply(lambda s: s*100)
+# Make an easy lambda function: just multiply the value in each cell in a row by 1000.
+e_commerce_csv_df['UnitPrice'] = e_commerce_csv_df['UnitPrice'].apply(lambda s: s*1000)
 print(e_commerce_csv_df)
 
 
