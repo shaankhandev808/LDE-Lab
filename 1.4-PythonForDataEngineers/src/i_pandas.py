@@ -23,6 +23,7 @@
 # pd = pandas, df = dataframe. You see this a lot. 
 
 import pandas as pd
+import io 
 
 # Check working directory to diagnose these filepath mess-ups.
 import os
@@ -156,9 +157,13 @@ print(e_commerce_appended_df.head(10))
 ##########################################################
 # Merging of dataframes
 ##########################################################
+# In SQL, you JOIN stuff on columns. In pandas you merge. 
+# Exact same thing. 
 
+# Wrap the string so you can explicity tell Pandas
+# to treat it like a file.
 my_json = '{"Country" : ["United Kingdom", "France", "Australia", "Netherlands"], "Language":["English" , "French", "English" , "Dutch"]}'
-json_df = pd.read_json(my_json)
+json_df = pd.read_json(io.StringIO(my_json))    # Tell pandas: treat this string like a file.
 print(json_df)
 
 e_commerce_csv_df = e_commerce_csv_df.merge(json_df,on = "Country")
